@@ -6,7 +6,7 @@
 
 	<groupId>tk.thesuperlab</groupId>
 	<artifactId>photonlib</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>PhotonLib</name>
 
 	<distributionManagement>
@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.13.3</version>
+			<version>2.14.0-rc2</version>
 		</dependency>
 
 		<dependency>
