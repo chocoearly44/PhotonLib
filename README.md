@@ -21,18 +21,37 @@ All methods <strike>are</strike> will be documented in the [Wiki][wiki-url] sect
 
 ## Installation
 ### Maven
+1. Add repository
+```xml
+<repository>
+  <id>repsy</id>
+  <url>https://repo.repsy.io/mvn/chocoearly44/maven</url>
+</repository>
+```
+
+2. Add dependency
 ```xml
 <dependency>
-    <groupId>tk.thesuperlab</groupId>
-    <artifactId>photonlib</artifactId>
-    <version>VERSION</version>
+  <groupId>tk.thesuperlab</groupId>
+  <artifactId>photonlib</artifactId>
+  <version>VERSION</version>
 </dependency>
 ```
 
 ### Gradle
+1. Add repository
+```groovy
+repositories {
+  maven {
+    url "https://repo.repsy.io/mvn/chocoearly44/maven"
+  }
+}
+```
+
+2. Add dependency
 ```groovy
 dependencies {
-    implementation 'tk.thesuperlab:photonlib:VERSION'
+  implementation 'tk.thesuperlab:photonlib:VERSION'
 }
 ```
 

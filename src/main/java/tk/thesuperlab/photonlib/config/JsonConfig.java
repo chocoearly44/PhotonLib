@@ -32,10 +32,11 @@ public class JsonConfig {
 	 * @throws Exception class missing, filesystem error...
 	 */
 	public static <T extends Serializable> void initializeConfig(File configFile, Class<T> clazz) throws Exception {
-		if(!configFile.exists()) {
-			configFile.createNewFile();
+		if(configFile.exists()) {
+			return;
 		}
 
+		configFile.createNewFile();
 		FileOutputStream fout = new FileOutputStream(configFile);
 		om.writeValue(fout, clazz.getDeclaredConstructor().newInstance());
 	}

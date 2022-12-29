@@ -22,10 +22,11 @@ public class FileConfig {
 	 * @throws Exception class missing, filesystem error...
 	 */
 	public static <T extends Serializable> void initializeConfig(File configFile, Class<T> clazz) throws Exception {
-		if(!configFile.exists()) {
-			configFile.createNewFile();
+		if(configFile.exists()) {
+			return;
 		}
 
+		configFile.createNewFile();
 		FileOutputStream fout = new FileOutputStream(configFile);
 		ObjectOutputStream oos = new ObjectOutputStream(fout);
 
